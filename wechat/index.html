@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>wechat</title>
 	<script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+	<script src="js/jweixin-1.0.0.js"></script>
 	<style>
 	html,body
 	{
@@ -24,7 +25,7 @@
 		$.ajax({
 			type:"get",
 			url:"https://api.weixin.qq.com/cgi-bin/token",
-			data:{'grant_type':'client_credential','appid':appid,'secret':appsecret},
+			data:{'grant_type':'client_credential','appid':'wxaa91b5adc09cac9e','secret':'2b59ef08f90063c70f5c1ec81474ed46'},
 			success:function(data){
 				console.log(data)
 			}
