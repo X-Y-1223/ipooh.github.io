@@ -3,8 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<title>wechat</title>
-	<script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+	<script src="js/jquery.min.js"></script>
 	<script src="js/jweixin-1.0.0.js"></script>
+	<script src="js/wechat.js"></script>
 	<style>
 	html,body
 	{
@@ -16,29 +17,18 @@
 	</style>
 </head>
 <body>
-	test
-	<!--<div class="faceShare"><iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&layout=button_count&mobile_iframe=true&width=92&height=20&appId" width="92" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe></div>-->
+	<button></button>
 </body>
 </html>
 <script>
-	function getWechatApi(appid,appsecret){
-		$.ajax({
-			type:"get",
-			url:"https://api.weixin.qq.com/cgi-bin/token",
-			data:{'grant_type':'client_credential','appid':'wxaa91b5adc09cac9e','secret':'2b59ef08f90063c70f5c1ec81474ed46'},
-			success:function(data){
-				console.log(data)
-			}
-		});
-	}
-	
-	function getLinkedinApi(){
-		$.ajax({
-			type:"get",
-			url:"https://api.linkedin.com/v1/people/~?format=json",
-			success:function(data){
-				console.log(data)
-			}
-		});
-	}
+	// function getWechatApi(appid,appsecret){
+	// 	$.ajax({
+	// 		type:"get",
+	// 		url:"https://api.weixin.qq.com/cgi-bin/token",
+	// 		data:{'grant_type':'client_credential','appid':'wxaa91b5adc09cac9e','secret':'2b59ef08f90063c70f5c1ec81474ed46'},
+	// 		success:function(data){
+	// 			console.log(data)
+	// 		}
+	// 	});
+	// }
 </script>
