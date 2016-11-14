@@ -1,11 +1,12 @@
 <?php
 	function getJsSDK($url)
 	{
-
+		$appid='wxaa91b5adc09cac9e';
+		$appsecret='2b59ef08f90063c70f5c1ec81474ed46';
 		$time=file_get_contents("upload/time.txt");
 		$ticket=file_get_contents("upload/ticket.txt");
 		if (!$time || (time() - $time >= 3600)){
-			$rs = file_get_contents('https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid='.APPID .'&secret=' . APPSECRET);
+			$rs = file_get_contents('https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid='.$appid .'&secret=' . $appsecret);
 			$rs = json_decode($rs,true);
 			if(isset($rs['access_token'])){
 				$time = time();
@@ -34,6 +35,6 @@
 		}
 		$ticketstr="jsapi_ticket=". $ticket ."&noncestr=". $noncestr ."&timestamp=". $time ."&url=". $url;
 		$sign = sha1($ticketstr);
-		return json_encode(array("appid" => APPID, "time" => $time, "noncestr" => $noncestr, "sign" => $sign, "url" => $url));	
+		return json_encode(array("appid" => $appid, "time" => $time, "noncestr" => $noncestr, "sign" => $sign, "url" => $url));	
 	}
 ?>
