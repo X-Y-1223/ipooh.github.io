@@ -25,7 +25,7 @@ function wechatFun(){
         }
         wechatShare();
     }).fail(function() {
-        console.log("请求接口失败！");
+        console.log("请求接口失败！+1");
     });
 }
 

@@ -3,7 +3,6 @@
 	{
 		$appid='wxaa91b5adc09cac9e';
 		$appsecret='2b59ef08f90063c70f5c1ec81474ed46';
-		echo $appid;
 		$time=file_get_contents("upload/time.txt");
 		$ticket=file_get_contents("upload/ticket.txt");
 		if (!$time || (time() - $time >= 3600)){
